@@ -139,7 +139,19 @@ Our colleagues have built this [pipeline](https://github.com/msimecek/Speech-Tra
 ### Setup the bot
 
 This bot also include the [WebChat client](https://github.com/Microsoft/BotFramework-WebChat), tweaked, in order to hook a custom speech model.
-To wrap up everything, don't forget to add the following parameters to the ```appsettings.json```:
+By default, the [WebChat client](https://github.com/Microsoft/BotFramework-WebChat) does not allow to specify a custom speech model. We therefore had to modify the code in order to include the library ```microsoft.cognitiveservices.speech.sdk.bundle.js```, so that we could inject the correct speech model id.
+
+This is done in the file [main.js](/S2T4Bank/wwwroot/js/main.js), on the click on the microphone, line 56.
+
+```js
+speechConfig.endpointId = endpointId;
+```
+
+```endpointId``` represents the specific model id to use
+
+The rest of the script mostly allows to insert the microphone button on the webchat.
+
+To make everything work, don't forget to add the following parameters to the ```appsettings.json```:
 
 ```json
 "Region": "Speech service region, ex: westeurope",
@@ -156,6 +168,11 @@ Also note that to get a directline token, you need to connect to the [Azure port
 ## Deploy the bot to Azure
 
 To learn more about deploying a bot to Azure, see [Deploy your bot to Azure](https://aka.ms/azuredeployment) for a complete list of deployment instructions.
+
+## Contributors
+
+[Martin Simecek](https://github.com/msimecek)
+[Laurent Ellerbach](https://github.com/Ellerbach)
 
 ## Further reading
 
