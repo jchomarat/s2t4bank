@@ -1,0 +1,49 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.0",
+  "body": [
+    {
+      "type": "Image",
+      "url": "http://localhost:3978/images/logo.png",
+      "size": "stretch"
+    },
+    {
+      "type": "TextBlock",
+      "spacing": "medium",
+      "size": "default",
+      "weight": "bolder",
+      "text": "Welcome on S2T4Bank!",
+      "wrap": true,
+      "maxLines": 0
+    },
+    {
+      "type": "TextBlock",
+      "size": "default",
+      "isSubtle": "true",
+      "text": "What do you want to do today?",
+      "wrap": true,
+      "maxLines": 0
+    },
+    {
+      "type": "TextBlock",
+      "size": "default",
+      "isSubtle": "false",
+      "text": "Write 'cancel' if you want to stop any operation",
+      "wrap": true,
+      "maxLines": 0
+    }
+  ],
+    "actions": [
+      {
+        "type": "Action.Submit",
+        "title": "Ask for a loan",
+        "data": "Loan"
+      },
+      {
+        "type": "Action.Submit",
+        "title": "Change language",
+        "data": "Language"
+      }
+    ]
+}

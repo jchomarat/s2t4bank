@@ -1,0 +1,144 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "S2TforBank",
+  "desc": "Speech to Text for Bank",
+  "culture": "fr-fr",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "emprunt"
+    },
+    {
+      "name": "None"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [
+    {
+      "name": "insurance",
+      "subLists": [
+        {
+          "canonicalForm": "di",
+          "list": [
+            "DI",
+            "décès invalidité",
+            "décès",
+            "invalidité",
+            "PTIA",
+            "perte totale et irréversible d'autonomie"
+          ]
+        },
+        {
+          "canonicalForm": "itt",
+          "list": [
+            "incapacité temporaire totale de travail",
+            "ITT"
+          ]
+        },
+        {
+          "canonicalForm": "ipt",
+          "list": [
+            "invalidité permanente totale",
+            "IPT"
+          ]
+        },
+        {
+          "canonicalForm": "gpe",
+          "list": [
+            "garantie perte d'emploi",
+            "perte d'emploi",
+            "GPE"
+          ]
+        },
+        {
+          "canonicalForm": "none",
+          "list": [
+            "pas d'assurance",
+            "aucune assurance",
+            "sans assurance",
+            "aucune",
+            "sans",
+            "je n'en veux pas",
+            "rien"
+          ]
+        }
+      ],
+      "roles": []
+    }
+  ],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [
+    {
+      "name": "datetimeV2",
+      "roles": []
+    },
+    {
+      "name": "money",
+      "roles": []
+    }
+  ],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "emprunter 100 euros",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "je souhaite emprunter 20000 euros pendant 5 ans avec assurance invalidité",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "je suis intéressé par un emprunt avec des mensualité de 1500 euros maximum pendant 3 ans avec assurance décès invalidité",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "je veux empreunter 100 euros",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "je veux emprunter 100 euros",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "je veux emprunter 100000 euros avec des mensualités de 1000 euros maximum",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "je veux un emprunt pour 10000 euros pendant 3 ans avec assurance décès et invalidité",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "ppp",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "prêt de 100 euros",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "prêt de 100 euros pendant 1 an",
+      "intent": "emprunt",
+      "entities": []
+    },
+    {
+      "text": "prêt de 1000 euros",
+      "intent": "emprunt",
+      "entities": []
+    }
+  ],
+  "settings": []
+}
